@@ -6,11 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    border-color:aliceblue;
+    border-color: aliceblue;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Evita barras de rolagem */
 }
 
 /* Estilo do cartão */
@@ -24,11 +25,8 @@ body {
     padding: 20px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
     width: 100%; /* Para se ajustar ao tamanho da tela do celular */
-    max-height: 600px; /* Define uma altura máxima */
-    position: relative; /* Posiciona de forma relativa */
-
+    height: 100%; /* Para ocupar toda a altura da tela */
 }
 
 /* Logomarca */
@@ -45,16 +43,12 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
- 
-    
 }
 
-.button img{
+.button img {
     width: 220px;
     height: 80px;
-    
 }
-
 
 .button {
     display: flex;
@@ -72,11 +66,11 @@ body {
     transform: scale(1.1);
 }
 
-.final{
+.final {
     font-family: "Goudy Bookletter 1911", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 10px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
 }
 
 @media (min-width: 768px) {
@@ -86,6 +80,8 @@ body {
     .card {
         max-width: 500px;
         padding: 30px;
+        width: 100%; /* Manter a largura em 100% */
+        height: auto; /* Permitir que a altura se ajuste */
     }
     .logo {
         max-width: 300px;
