@@ -1,39 +1,51 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    background-color: #E8968B;
+    height: 100%; /* Garante que o html e body ocupem 100% da altura da tela */
     font-family: Arial, sans-serif;
-    border-color: aliceblue;
-    height: 100vh;
+    overflow: hidden; /* Impede a rolagem do body */
+
+}
+ 
+/* Wrapper para manter o cartão centrado */
+.wrapper {
+    height: 100%; /* Permite que o wrapper ocupe toda a altura da tela */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Evita barras de rolagem */
+    justify-content: center; /* Centraliza o cartão na tela */
+    align-items: center; /* Centraliza o cartão verticalmente */
 }
 
 /* Estilo do cartão */
 .card {
-    background-image: url('imagens/fundo.png'); /* Coloca a imagem de fundo no card */
+    background-image: url('imagens/fundo.png'); /* Define a imagem de fundo no CARD */
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.85); /* Cor branca semi-transparente */
+    background-size: cover; /* Garante que a imagem cubra toda a área do CARD */
+
     border-radius: 12px;
     padding: 20px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Para se ajustar ao tamanho da tela do celular */
-    height: 100%; /* Para ocupar toda a altura da tela */
+    width: 90%; /* Para que o cartão ocupe 90% da largura em telas menores */
+    max-width: 500px; /* Largura máxima para telas maiores */
+    max-height: 90vh; /* Limita a altura máxima do cartão para não sair da tela */
+    overflow-y: auto; /* Permite rolagem se o conteúdo exceder a altura do cartão */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o espaço seja distribuído entre os elementos do cartão */
 }
 
 /* Logomarca */
 .logo {
     max-width: 200px;
-    margin-bottom: 20px;
-    padding-top: 100px;
+    margin: 20px auto; /* Adiciona margem para centralizar */
+    padding-top: 10%; /* Adapta o espaço acima da logomarca */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -45,25 +57,25 @@ body {
     gap: 15px;
 }
 
-.button img {
-    width: 220px;
-    height: 80px;
-}
-
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px; /* Ajuste conforme necessário */
+    width: 100%; /* Faz com que o botão ocupe toda a largura do cartão */
     height: 80px; /* Ajuste conforme necessário */
-    margin: 0 auto;
-    border-radius: 50%;
-    padding: 10px;
-    transition: transform 0.3s ease;
+    margin: 0; /* Remove margens indesejadas */
+    border-radius: 10px; /* Borda arredondada */
+    background-color: transparent; /* Fundo transparente */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.button img {
+    width: 220px; /* Para manter a imagem no tamanho desejado */
+    height: auto; /* Manter a proporção */
 }
 
 .button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
 .final {
@@ -71,25 +83,20 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 10px;
+    margin-top: auto; /* Faz com que a mensagem final fique no rodapé */
 }
 
 @media (min-width: 768px) {
     body {
-        background-color: #f0f0f0;
+        background-color: #f0f0f0; /* Altera a cor de fundo em telas maiores */
     }
     .card {
-        max-width: 500px;
+        max-width: 500px; /* Limita a largura do cartão */
         padding: 30px;
-        width: 100%; /* Manter a largura em 100% */
-        height: auto; /* Permitir que a altura se ajuste */
     }
     .logo {
         max-width: 300px;
         padding-top: 20px;
-    }
-    .button img {
-        width: 250px;
-        height: 100px;
     }
     .final {
         font-size: 12px;
