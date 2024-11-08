@@ -8,50 +8,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
-    <!-- Importando o arquivo de estilo CSS -->
     <link rel="stylesheet" href="arquivo.css">
 </head>
 <body>
     <div class="wrapper">
-        <!-- Card principal -->
         <div class="card">
-            <!-- Logomarca -->
             <img src="imagens/logomarca.png" alt="Logomarca da Loja" class="logo">
             
             <!-- Seção de botões -->
             <div class="buttons">
-                <!-- Botões de WhatsApp e Facebook lado a lado -->
-                <div class="button-row">
-                    <div class="button">
-                        <a href="https://wa.me/message/QZZMFVE4Q5NSC1">
-                            <img src="imagens/whats.png" alt="Botão WhatsApp">
-                        </a>
-                    </div>
-                    <div class="button">
-                        <a href="https://www.facebook.com/share/Qpi6W5gFYGMEenXR/?mibextid=LQQJ4d">
-                            <img src="imagens/facebook.png" alt="Botão Facebook">
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Botão Instagram ocupando toda a largura -->
-                <div class="button instagram-button">
-                    <a href="https://www.instagram.com/lojavirgemdeguadalupe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                        <img src="imagens/instagram.png" alt="Botão Instagram">
-                    </a>
-                </div>
-                
-                <!-- Iframe com a localização da loja -->
-                <div class="location">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7959.908337800452!2d-38.30416256948921!3d-4.029771796676512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b89f44e30e4987%3A0x8941e38372e6ab17!2sAv.%20Cap.%20Nogueira%2C%201251%20-%20Pindoretama%2C%20CE%2C%2062860-000!5e0!3m2!1spt-BR!2sbr!4v1730144881130!5m2!1spt-BR!2sbr" width="100%" height="250" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-
-                <h2 class="final">Ao clicar nos links será automaticamente direcionado à rede social correspondente</h2>
+                <button id="whatsapp" class="social-button">
+                    <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
+                    WhatsApp
+                </button>
+                <button id="facebook" class="social-button">
+                    <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook">
+                    Facebook
+                </button>
+                <button id="instagram" class="social-button">
+                    <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram">
+                    Instagram
+                </button>
             </div>
+
+            <!-- Mapa de Localização -->
+            <div class="location">
+                <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.954168900226!2d-38.30416256948921!3d-4.029771796676512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b89f44e30e4987%3A0x8941e38372e6ab17!2sAv.%20Cap.%20Nogueira%2C%201251%20-%20Pindoretama%2C%20CE%2C%2062860-000!5e0!3m2!1spt-BR!2sbr!4v1731042458358!5m2!1spt-BR!2sbr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe> </iframe>
+            </div>
+
+            <h2 class="final">Clique para acessar nossas redes sociais</h2>
         </div>
     </div>
-</body>
-</html>
-        a rede social correspondente</h2>
+    
+    <script src="script.js"></script>
 </body>
 </html>
